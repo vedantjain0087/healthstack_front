@@ -1,0 +1,33 @@
+<section id="service">
+    <img src="img/aadhaar.jpg" height="150">
+    <div class="row upload_bg">
+        <center>
+
+            <h3 class="beauty_head">Upload your Adhaar Card</h3>
+            And start with your health analysis or report submission
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="uploads">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="62" viewBox="0 0 89 62">
+                    <path transform="translate(-676 -6401)" fill="#e0e9f3" d="M731 6453h20.94c6.07-.19 11.06-5.45 11.06-12a11.06 11.06 0 0 0-11.62-11h-.36l-1.98.02-.04-1.98c-.01-.58 0-1.03.04-2.05.05-1.45.05-2.1-.03-2.75l-.01-.27c.17-10.99-8.5-19.97-19-19.97-9.34 0-17.15 6.09-19.05 14.44l-.64 2.28-2.18-.92c-1.49-.72-2.08-.85-4.06-.8-4.27.15-7.83 2.47-9.23 5.78l-.51 1.22H693a71.18 71.18 0 0 0-.96 0c-7.89.15-14.04 6.33-14.04 14 0 7.32 5.69 13.37 13.08 14H709v2h-18c-8.4-.67-15-7.55-15-16 0-8.72 6.99-15.83 16-16h1c1.66-3.92 5.83-6.82 11-7a10.9 10.9 0 0 1 3.12.25c.1.03.73.21 1.88.68.34-1.2.53-1.79.55-1.88 2.76-8.1 10.73-14.05 20.45-14.05 11.5 0 21.2 9.78 21 22 .11.96.08 1.98.04 3l-.04 1.7v.3h1c7.08-.05 13 5.86 13 13 0 7.76-5.97 13.78-13 14h-21zm-9-15.09V6463h-2v-25.09l-4.47 4.48-1.42-1.42 6.36-6.36c.5-.4.53-.4 1.06 0l6.36 6.36-1.42 1.42z"></path>
+                </svg>
+                <br>
+                <br>
+                <div class="upload-btn-wrapper">
+                    <button class="btn2" ng-click="upload_adhaar()">Upload Adhaar</button>
+                    <input type="file" class="filestyle " filepreview="filepreview" file-model="myFile1" filestyle="{buttonText: 'Select image',iconName: 'fa fa-file-image-o'}"
+                        id="fileInput1" onchange="angular.element(this).scope().upload(this.files)">
+                </div>
+            </div>
+        </center>
+    </div>
+    <br>
+</section>
+<div class="cover" ng-if="scroll == true">
+    <center>
+            <div class="lds-ripple"><div>
+    </center>
+</div>

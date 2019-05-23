@@ -1,0 +1,55 @@
+<div ng-include="'pages/common/navigation.html'"></div>
+<section id="service" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <h2 class="ser-title">Add your medical record</h2>
+            <hr class="botm-line">
+            <form>
+                <div class="form-group">
+                    <label for="symptoms" class="black_text">Symptoms : </label>
+                    <textarea class="form-control" ng-model="symptoms" id="symptoms" rows="2" cols="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="disease" class="black_text">Diseases : </label>
+                    <textarea class="form-control" ng-model="disease" id="disease" rows="2" cols="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="treatment" class="black_text">Treatment : </label>
+                    <textarea class="form-control"ng-model="treatment" id="treatment" rows="2" cols="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="location" class="black_text">Location : </label>
+                    <input type="text" ng-model="location" class="form-control" id="location" />
+                </div>
+                <div class="form-group">
+                    <label for="amount" class="black_text">Billing Amount : </label>
+                    <input type="text" ng-model="amount" class="form-control" id="amount" />
+                </div>
+                <div class="form-group">
+                    <label for="doctor" class="black_text">Doctor`s Name : </label>
+                    <input type="text" ng-model="doctor" class="form-control" id="doctor" />
+                </div>
+                <div class="form-group">
+                    <label for="medical_record" class="black_text">Medical Record : &nbsp;&nbsp;&nbsp;</label>
+                    <input type="file" class="filestyle " filepreview="filepreview" file-model="myFile1" filestyle="{buttonText: 'Select image',iconName: 'fa fa-file-image-o'}"
+                        id="fileInput1" onchange="angular.element(this).scope().upload(this.files)">
+                </div>
+                <br>
+                <div class="form-group" class="black_text">
+                    <label for="input_age" class="black_text">Age : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <select name="input_age" ng-model="input_age" class="black_text" id="input_age">
+                        <option value="{{age}}" class="black_text" ng-repeat="age in ages track by $index">{{age}}</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="input_weight" class="black_text">Weight : &nbsp;&nbsp;&nbsp;</label>
+                    <select name="input_weight" ng-model="input_weight" class="black_text" id="input_weight">
+                        <option value="{{age}}" class="black_text" ng-repeat="age in ages track by $index">{{age}}</option>
+                    </select>
+                </div>
+                <button type="button" ng-click="add_medical()" class="btn btn-primary">Add Medical record</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+<div ng-include="'pages/common/navigation.html'"></div>
+<section id="service" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <h2 class="ser-title">Your Medical History</h2>
+            <hr class="botm-line">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>Disease</th>
+                        <th>Symptoms</th>
+                        <th>Treatment</th>
+                        <th>Age</th>
+                        <th>Weight</th>
+                        <th>Location</th>
+                        <th>Amount</th>
+                        <th>Medical Record</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="rec in records track by $index">
+                        <td>{{$index}}</td>
+                        <td>{{rec.disease}}</td>
+                        <td>{{rec.symptoms}}</td>
+                        <td>{{rec.treatment}}</td>
+                        <td>{{rec.age}}</td>
+                        <td>{{rec.weight}}</td>
+                        <td>{{rec.location}}</td>
+                        <td>{{rec.amount}}</td>
+                        <td><a href="{{rec.url}}.pdf">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+      
+    </div>
+</section>
